@@ -25,6 +25,10 @@ body {
 
 }
 
+h1 {
+  margin: 0;
+}
+
 /* --- Navigation Menu ------------------------------ */
 .overlay {
   position: fixed;
@@ -150,7 +154,6 @@ nav li:nth-of-type(5) {
 }
 
 /* Slide out animation with delay for each nav item */
-
 .slide-out-1 {
   animation: slide-out 0.3s linear 0.5s both;
 }
@@ -181,7 +184,6 @@ nav li:nth-of-type(5) {
 }
 
 /* --- Menu Bars ------------------------------------ */
-
 .menu-bars {
   position: fixed;
   top: 1rem;
@@ -222,9 +224,6 @@ section {
   width: 100%;
   height: 100vh;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--primaryColor);
@@ -234,6 +233,9 @@ section#home {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.6), rgba(40, 180, 131, 0.4)), url("img/coding.jpg");
   background-size: cover;
   background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Adding text, links, and button to the home section */
@@ -265,6 +267,7 @@ section#home {
   letter-spacing: 5px;
   animation-name: moveInRight;
   animation-duration: 2s;
+  text-align: center;
 }
 
 .heading-secondary {
@@ -274,37 +277,42 @@ section#home {
   letter-spacing: 11px;
   animation-name: moveInLeft;
   animation-duration: 2s;
+  text-align: center;
 }
 
 /* Button */
-.div-btn {
-  position: absolute;
-  top: 400px;
+.text-box {
+  margin-top: 30vh; 
+}
+
+.btn {
   font-family: "Lato", sans-serif;
 }
 
-.btn:link, 
+.btn:link,
 .btn:visited {
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 15px 40px; 
+  display: inline-block; 
   border-radius: 100px;
-  transition: all 0.2s;
-  display: inline-block;
+  transition: all .2s;
 }
 
-.div-btn:hover {
+.btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.div-btn:active {
+.btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.white-btn {
-  color: black;
-  background-color: white;
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  margin: auto;
 }
 
 .btn::after {
@@ -316,18 +324,38 @@ section#home {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
+  transition: all .4s;
 }
 
 .btn-white::after {
-  background-color: white;
+  background-color: #fff;
 }
 
-section#about {
-  background-color: var(--navColor2);
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
 }
 
 section#skills {
-  background-color: var(--navColor3);
+  background-color: var(--navColor3); 
 }
 
 section#projects {
@@ -384,4 +412,51 @@ section#contact {
     top: 0.5rem;
     right: 1rem;
   }
+}
+
+/* About me page */
+section#about {
+  background-color: var(--navColor2);
+  height: 75vh;
+}
+
+section#about h1 {
+  font-family: "Lato", sans-serif;
+  position: relative;
+  top: 20px;
+  left: 10px; 
+  font-weight: 900px;
+  font-size: 30px;
+  line-height: 100px;
+  letter-spacing: 5px;
+}
+
+.icon {
+  background-color: white;
+  border: solid black 2px;
+}
+
+/* Skills page */
+section#skills {
+  font-family: "Lato", sans-serif;
+  height: 75vh;
+}
+
+section#skills h1 {
+  position: relative;
+  letter-spacing: 5px;
+  font-size: 30px;
+  line-height: 100px;
+  font-weight: 900px;
+  left: 10px; 
+}
+
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  text-align: center;
+  margin: 25px 20px;
 }

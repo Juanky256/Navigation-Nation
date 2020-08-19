@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Animated Navigation</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,6 +29,8 @@
     <div class="bar3"></div>
   </div>
   <!-- Sections -->
+
+  <!-- Header -->
   <section id="home">
     <a href="https://github.com/Juanky256" class="portfolio-link">JUAN PORTFOLIO</a>
     <header class="header">
@@ -36,15 +39,86 @@
         <span class="heading-secondary">Software Engineer</span>
       </h1>
     </header>
-    <div class="div-btn">
-      <a href="#projects" class="btn white-btn">View my projects</a>
+    <div class="text-box">
+      <a href="#projects" class="btn btn-white btn-animate">View my projects</a>
     </div>
   </section>
-  <section id="about"><h1>Learn More About Me</h1></section>
-  <section id="skills"><h1>These Are My Strengths</h1></section>
-  <section id="projects"><h1>These Are My Results</h1></section>
-  <section id="contact"><h1>Available Anytime</h1></section>
-  <!-- Script -->
+
+  <!-- About -->
+  <section id="about">
+    <h1 class="about-header" data-aos="fade-right">Why me?</h1>
+    <p></p>
+
+    <div class="icons">
+      <div class="main-container">
+        <div class="icon">
+          <img src="img/rocket.svg" height=50px> <br>
+        </div>
+        <p>Fast Learner</p>
+      </div>
+      <div class="main-container"></div>
+        <div class="icon">
+          <img src="img/gear.svg" height=50px>
+        </div>
+        <p>Problem-Solver</p>
+      </div>
+      <div class="main-container"></div>
+        <div class="icon">
+          <img src="img/flex.svg" height=50px>
+        </div>
+        <p>Flexible</p>
+      </div>
+    </div>
+    <div class="about-me-body">
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h1 data-aos="flip-up"> Skills </h1>
+    <div class="skill-container">
+      <div class="skill" data-aos="zoom-out">
+        <h3>JavaScript</h3>
+        <img src="img/javascript.svg" height=75px>
+      </div>
+      <div class="skill" data-aos="zoom-out">
+        <h3>Python</h3>
+        <img src="img/python.svg" height=75px>
+      </div>
+      <div class="skill" data-aos="zoom-out">
+        <h3>HTML</h3>
+        <img src="img/html.svg" height=75px>
+      </div>
+      <div class="skill" data-aos="zoom-out">
+        <h3>CSS</h3>
+        <img src="img/css.svg" height=75px>
+      </div>
+      <div class="skill" data-aos="zoom-out">
+        <h3>C++</h3>
+        <img src="img/c++.svg" height=75px>
+      </div>
+      <div class="skill" data-aos="zoom-out">
+        <h3>SQL</h3>
+        <img src="img/sql.svg" height=100px>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+
+  </section>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
