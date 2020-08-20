@@ -454,6 +454,7 @@ section#skills h1 {
 .skill-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .skill {
